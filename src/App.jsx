@@ -44,7 +44,7 @@ export default function App() {
           <ReceiptText size={28} />
           <h1>Expense Tracker</h1>
         </div>
-        <p className="header-sub">Track every dollar. Understand your spending.</p>
+        <p className="header-sub">Track every penny . Understand your spending.</p>
         <CurrencySelector currentCurrency={currency} onSelect={setCurrency} />
       </header>
 

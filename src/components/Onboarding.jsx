@@ -2,7 +2,7 @@
  * Full-screen onboarding overlay to select currency.
  */
 export default function Onboarding({ onSelect }) {
-    const currencies = ["USD", "EUR", "GBP", "JPY"];
+    const currencies = ["USD", "EUR", "GBP", "JPY", "SLE"];
 
     return (
         <div className="onboarding-overlay">

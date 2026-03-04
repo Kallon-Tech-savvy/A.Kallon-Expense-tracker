@@ -2,7 +2,7 @@
  * Simple currency selector pill.
  */
 export default function CurrencySelector({ currentCurrency, onSelect }) {
-    const currencies = ["USD", "EUR", "GBP", "JPY"];
+    const currencies = ["USD", "EUR", "GBP", "JPY", "SLL"];
 
     return (
         <div className="currency-selector">
