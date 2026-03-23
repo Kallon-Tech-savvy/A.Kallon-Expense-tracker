@@ -76,27 +76,29 @@ export default function CreditCard3D({ total, currency, budget, setBudget }) {
                     <div className="card-settings" onClick={handleInputClick}>
                         <h3>Set Budget</h3>
 
-                        <div className="card-field">
+                        <div className="card-backs">
+                            <div className="card-field">
                             <label>Amount</label>
                             <input
                                 type="number"
                                 value={editAmount}
                                 onChange={(e) => setEditAmount(e.target.value)}
                                 onClick={(e) => e.stopPropagation()}
-                            />
-                        </div>
+                                />
+                            </div>
 
-                        <div className="card-field">
-                            <label>Cycle</label>
-                            <select
-                                value={editCycle}
-                                onChange={(e) => setEditCycle(e.target.value)}
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <option value="Weekly">Weekly</option>
-                                <option value="Bi-weekly">Bi-weekly</option>
-                                <option value="Monthly">Monthly</option>
-                            </select>
+                            <div className="card-field">
+                                <label>Cycle</label>
+                                <select
+                                    value={editCycle}
+                                    onChange={(e) => setEditCycle(e.target.value)}
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    <option value="Weekly">Weekly</option>
+                                    <option value="Bi-weekly">Bi-weekly</option>
+                                    <option value="Monthly">Monthly</option>
+                                </select>
+                            </div>
                         </div>
 
                         <button className="btn-save-card" onClick={handleSave}>

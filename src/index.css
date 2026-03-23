@@ -398,12 +398,12 @@ ul {
   border-color: var(--accent)
 }
 
-.pill-dot {
+/* .pill-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   flex-shrink: 0
-}
+} */
 
 .filter-pill.active .pill-dot {
   background-color: #fff !important
@@ -629,7 +629,7 @@ ul {
 
 .coin-face.back {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, #d97706, #fbbf24);
+  background: linear-gradient(135deg, #ffa640, #fbbf24);
 }
 
 .coin-edge {
@@ -702,66 +702,6 @@ ul {
 .total-amount:hover {
   transform: scale(1.1) rotateX(10deg);
   text-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
-}
-
-/* 3D Floating Wallet for Empty State */
-.wallet-3d-container {
-  width: 120px;
-  height: 100px;
-  perspective: 600px;
-  margin-bottom: 2rem;
-}
-
-.wallet-3d {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: wallet-float 4s ease-in-out infinite;
-}
-
-.wallet-part {
-  position: absolute;
-  background: linear-gradient(135deg, var(--bg-input), var(--bg-raised));
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  backface-visibility: hidden;
-}
-
-.wallet-front {
-  width: 100%;
-  height: 80%;
-  bottom: 0;
-  transform: translateZ(20px);
-  background: linear-gradient(145deg, #3f3f46, #27272a);
-}
-
-.wallet-back {
-  width: 100%;
-  height: 90%;
-  bottom: 0;
-  transform: translateZ(-20px);
-  background: #18181b;
-}
-
-.wallet-flap {
-  width: 100%;
-  height: 60%;
-  top: 0;
-  transform-origin: top;
-  transform: rotateX(-20deg) translateZ(-20px);
-  background: #3f3f46;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.wallet-money {
-  width: 80%;
-  height: 40%;
-  background: #10b981;
-  top: 20%;
-  left: 10%;
-  transform: translateZ(0);
 }
 
 @keyframes wallet-float {
@@ -850,7 +790,7 @@ ul {
   background: linear-gradient(135deg, #1e1e24, #2a2a35);
   /* Metallic shine overlay */
   background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, transparent 100%),
     radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 60%);
   display: flex;
   flex-direction: column;
@@ -862,6 +802,8 @@ ul {
   background: #18181b;
   transform: rotateY(180deg);
   display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
   flex-direction: column;
   justify-content: center;
   line-height: 1;
@@ -870,7 +812,7 @@ ul {
 .card-chip {
   width: 40px;
   height: 28px;
-  background: linear-gradient(135deg, #fbbf24, #d97706);
+  background: linear-gradient(135deg, #fbbf24, #d47304);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -1144,7 +1086,7 @@ ul {
 
 .flip-hint {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
   right: 1.5rem;
   opacity: 0.5;
   font-size: 0.7rem;
@@ -1177,11 +1119,19 @@ ul {
 .card-settings h3 {
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.card-backs {
+  display: inline-flex;
+  gap: 1.2rem;
+  justify-content: center;
 }
 
 .card-field {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.3rem;
 }
 
@@ -1200,6 +1150,7 @@ ul {
   padding: 0.5rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  width: 100px;
 }
 
 .card-field input:focus,

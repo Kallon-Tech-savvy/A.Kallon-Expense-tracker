@@ -34,7 +34,7 @@ export default function CategoryFilter({
                         }}
                     >
                         <span
-                            className="pill-dot"
+                            className="bar-dot"
                             style={{ backgroundColor: meta.color }}
                         />
                         {cat}
